@@ -8,24 +8,24 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist/static'),
         filename: 'app.[hash].js',
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
                 loader: ['babel-loader', 'ts-loader'],
-                exclude: /node_modules/
-            }
-        ]
+                exclude: /node_modules/,
+            },
+        ],
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.json']
+        extensions: ['.ts', '.tsx', '.js', '.json'],
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'class-component-converter',
-            template: './static/index.html'
-        })
-    ]
+            template: './static/index.html',
+        }),
+    ],
 };

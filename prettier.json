@@ -6,6 +6,6 @@
     "bracketSpacing": true,
     "tabWidth": 4,
     "useTabs": false,
-    "trailingComma": "none",
+    "trailingComma": "all",
     "proseWrap": "always"
 }
