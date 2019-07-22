@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/HearTao/class-component-converter-playground#readme",
   "dependencies": {
+    "csstips": "^1.1.0",
+    "csx": "^9.1.0",
+    "typestyle": "^2.0.4",
     "vue": "^2.6.10",
     "vue-class-component": "^7.1.0",
     "vue-property-decorator": "^8.2.1",
