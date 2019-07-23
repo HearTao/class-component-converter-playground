@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MonacoEditorPlugin = require('monaco-editor-webpack-plugin')
+const MonacoEditorPlugin = require('monaco-editor-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
@@ -18,6 +19,19 @@ module.exports = {
                 loader: ['babel-loader', 'ts-loader'],
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../',
+                            hmr: process.env.NODE_ENV === 'development',
+                        },
+                    },
+                    'css-loader',
+                ],
+            },
         ],
     },
     resolve: {
@@ -29,7 +43,12 @@ module.exports = {
             template: './static/index.html',
         }),
         new MonacoEditorPlugin({
-            languages: ['javascript', 'css', 'html', 'typescript']
+            languages: ['javascript', 'css', 'html', 'typescript'],
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css',
+            ignoreOrder: false,
         }),
     ],
 };
