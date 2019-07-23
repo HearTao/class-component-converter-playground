@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MonacoEditorPlugin = require('monaco-editor-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -26,6 +27,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'class-component-converter',
             template: './static/index.html',
+        }),
+        new MonacoEditorPlugin({
+            languages: ['javascript', 'css', 'html', 'typescript']
         }),
     ],
 };

@@ -24,6 +24,7 @@
     "typestyle": "^2.0.4",
     "vue": "^2.6.10",
     "vue-class-component": "^7.1.0",
+    "vue-monaco": "^1.0.0",
     "vue-property-decorator": "^8.2.1",
     "vue-tsx-support": "^2.3.0"
   },
@@ -38,6 +39,7 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.1",
     "lint-staged": "^9.2.0",
+    "monaco-editor-webpack-plugin": "^1.7.0",
     "prettier": "^1.18.2",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",

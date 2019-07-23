@@ -2,6 +2,8 @@ import * as tsx from "vue-tsx-support";
 import { Component } from "vue-property-decorator";
 import { style } from "typestyle";
 
+import Editor from "./editor";
+
 const container = style({
   display: "flex",
   flexDirection: "column",
@@ -66,8 +68,10 @@ export default class App extends tsx.Component<{}> {
             <a class={item}>Fork me on Github</a>
           </div>
         </div>
-        Hello playground
-        <div class={takingSpace}></div>
+
+        <div class={takingSpace}>
+          <Editor />
+        </div>
         <div class={footer}></div>
       </div>
     );
